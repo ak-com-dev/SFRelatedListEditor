@@ -295,6 +295,9 @@ public with sharing class RelatedListDataGridController {
                             }
                         }
                     }
+                    else if ( sfield.getDescribe().getType() == Schema.DisplayType.DOUBLE ) {
+                        sObj.put(field, Double.ValueOf( mObj.get(field)));                   
+                    }
                     else{                        
                         sObj.put(field, mObj.get(field));                    
                     }                    
